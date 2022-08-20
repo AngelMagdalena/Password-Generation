@@ -14,25 +14,25 @@
         </div>
         <hr>
         <div class="checkbox_item">
-            <input type="number" id="word_lenght" placeholder="Input length of password" min="3" max="80">
+            <input type="number" id="word_lenght" onchange='getWordLength(this.value)' placeholder="Input length of password" min="3" max="80">
             <div>
-                <input type="checkbox" id="lowerCharacters" name="lowerCharacters">
+                <input type="checkbox" id="lowerCharacters" onchange="getIsLowerCharacters(this.checked)" name="lowerCharacters">
                 <label for="lowerCharacters">Including lower characters</label>
             </div>
             <div>
-                <input type="checkbox" id="upperCharacters" name="upperCharacters">
+                <input type="checkbox" id="upperCharacters" onchange="getIsUpperCharacters(this.checked)" name="upperCharacters">
                 <label for="upperCharacters">Including upper characters</label>
             </div>
             <div>
-                <input type="checkbox" id="numbers" name="numbers">
+                <input type="checkbox" id="numbers" onchange="getIsNumbers(this.checked)" name="numbers">
                 <label for="numbers">Including numbers</label>
             </div>
             <div>
-                <input type="checkbox" id="specialCharacters" name="specialCharacters">
+                <input type="checkbox" id="specialCharacters" onchange="getIsSpecialCharacters(this.checked)" name="specialCharacters">
                 <label for="specialCharacters">Including special characters</label>
             </div>
         </div>
-        <button class="generate_btn">Generate password</button>
+        <button class="generate_btn" onclick="generateClick()">Generate password</button>
     </div>
 
     <script src="../build/index.js"></script>

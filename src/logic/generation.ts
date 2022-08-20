@@ -1,11 +1,3 @@
-    let wordLength:number = 10;
-    let isLowerCharacters:boolean = true;
-    let isUpperCharacters:boolean = true;
-    let isNumbers:boolean = true;
-    let isSpecialCharacters:boolean = true;
-
-    console.log(document.getElementById('word_lenght'));
-    console.log(document.getElementById('lowerCharacters')?.attributes);
     
     const enum symbolTypes{
         lowerCharacter,
@@ -55,12 +47,12 @@
         return getRandomCharacter(specialCharacters);
     }
     
-    function generatePassword():any{
+    function generatePassword():string{
         let password = '';
         let possibleType:any[] = getPossibleTypes();
-        // if(wordLength > 80){
-        //     wordLength = 80;
-        // }
+        if(wordLength > 80){
+            wordLength = 80;
+        }
         for(let i = 0; i < wordLength; i++){
             let symbolType:any = getRandomSymbolType(possibleType);
             switch(symbolType){
@@ -78,19 +70,5 @@
                     break;
             }
         }
-        // setPassword(password);
         return password;
     }
-    
-    // function setPassword(password: string): void{
-    //     password = '';
-    // }
-
-
-
-
-
-
-
-
-
