@@ -6,6 +6,8 @@
 }
 
 .container{
+    position: relative;
+    height: 27vw;
     width: 40vw;
     margin: 10vw auto;
     padding: 2vw;
@@ -13,7 +15,6 @@
     border-radius: 10px;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
-
 
 hr{
     margin: 2vw -2vw;
@@ -65,8 +66,7 @@ input[type="checkbox"] {
     content: "✔";
     color:white;
     background-color: var(--element-color);
-    font-size: 1vw;
-    
+    font-size: 1vw;  
   }
 
 .generate_btn{
@@ -77,6 +77,8 @@ input[type="checkbox"] {
     color: white;
     font-weight: 500;
     margin: 1.5vw auto;
+    position: absolute;
+    right: 2vw;
 }
 
 .generate_btn:hover{
