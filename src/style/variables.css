@@ -1,4 +1,6 @@
+/* color configuration */
 *{
     --main--bg-color: white;
-    --container-bg-color: #FFF7F7;
+    --element-color: rgb(115, 29, 29);
+    --hover-color:rgb(158, 59, 59);
 }

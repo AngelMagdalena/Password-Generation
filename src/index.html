@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
     <title>Password_generation</title>
 </head>
 <body>
     <script src="../build/index.js"></script>
+    <div class="container">
+        <div class="password_field">
+            <label id="password"></label>
+        </div>
+        <hr>
+        <div class="checkbox_item">
+            <input type="number" id="word_lenght" placeholder="Input length of password" min="3" max="50">
+            <div>
+                <input type="checkbox" id="lowerCharacters" name="lowerCharacters">
+                <label for="lowerCharacters">Including lower characters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="upperCharacters" name="upperCharacters">
+                <label for="upperCharacters">Including upper characters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers" name="numbers">
+                <label for="numbers">Including numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="specialCharacters" name="specialCharacters">
+                <label for="specialCharacters">Including special characters</label>
+            </div>
+        </div>
+        <button class="generate_btn">Generate password</button>
+    </div>
 </body>
 </html>
