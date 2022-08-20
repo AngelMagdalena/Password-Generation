@@ -2,13 +2,16 @@
     let isLowerCharacters:boolean = true;
     let isUpperCharacters:boolean = true;
     let isNumbers:boolean = true;
-    let isSymbols:boolean = true;
+    let isSpecialCharacters:boolean = true;
+
+    console.log(document.getElementById('word_lenght'));
+    console.log(document.getElementById('lowerCharacters')?.attributes);
     
     const enum symbolTypes{
         lowerCharacter,
         upperCharacter,
         number,
-        symbol
+        specialCharacter
     }
     
     function getRandomSymbolType(arr:any[]):any{
@@ -26,8 +29,8 @@
          if(isNumbers){
             possibleTypes.push(symbolTypes.number)
          }
-         if(isSymbols){
-            possibleTypes.push(symbolTypes.symbol)
+         if(isSpecialCharacters){
+            possibleTypes.push(symbolTypes.specialCharacter)
          }
          return possibleTypes;
      }
@@ -48,13 +51,16 @@
         return getRandomCharacter(numbers);
     }
     
-    function getSymbol():string{
-        return getRandomCharacter(symbols);
+    function getSpecialCharacter():string{
+        return getRandomCharacter(specialCharacters);
     }
     
-    function generatePassword():string{
+    function generatePassword():any{
         let password = '';
         let possibleType:any[] = getPossibleTypes();
+        // if(wordLength > 80){
+        //     wordLength = 80;
+        // }
         for(let i = 0; i < wordLength; i++){
             let symbolType:any = getRandomSymbolType(possibleType);
             switch(symbolType){
@@ -67,15 +73,19 @@
                 case symbolTypes.number:
                     password += getNumber();
                     break;
-                case symbolTypes.symbol:
-                    password += getSymbol();
+                case symbolTypes.specialCharacter:
+                    password += getSpecialCharacter();
                     break;
             }
         }
+        // setPassword(password);
         return password;
     }
     
-    console.log(generatePassword());
+    // function setPassword(password: string): void{
+    //     password = '';
+    // }
+
 
 
 
