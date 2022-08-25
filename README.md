@@ -7,7 +7,7 @@ This project can be used like an independent sourse for own generation and also 
 :white_check_mark: Install typescript:
 `$ npm install -g typescript`
 
-:white_check_mark: In the main folder of project confertation ts-file into js-file:
+:white_check_mark: In the main folder of project convertation ts-file into js-file:
 `$ tsc`
 
 Open in the browser using index.html or in the termianal (first go to the folder, where index.js is):
