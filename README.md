@@ -1,5 +1,4 @@
 # Password-Generation
-Scripts for password generation 
 This project can be used like an independent sourse for own generation and also like scripts for introduction to another repositories.
 
 ## Build
